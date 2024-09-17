@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http -equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/1.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="color-1.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/color-1.css">
+
+    <title>Responsive e-commerce website</title>
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html " class="nav__logo">
+                <i class="bx bxs-shopping-bags nav__logo-icon"></i>e-shopper
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">Home</a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link ">Shop</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="cart.html" class="nav__link ">cart</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link ">Blog</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link ">Faq's</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__btns">
+                <div class="login__toggle" id="login-toggle">
+                    <i class="bx bx-user"></i>
+                </div>
+
+                <div class="nav__Shop" id="cart-shop">
+                    <i class="bx bx-shopping-bag"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="cart" id="cart">
+       <i class="bx bx-x cart__close"></i>
+       
+       <h2 class="cart__title-center">My cart</h2>
+
+       <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./men-woolen-jackets.jpg" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Windbreaker</h3>
+                    <span class="cart__price">$12</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>                    
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./BlackZipHoodie.webp" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">cardigan hoodie</h3>
+                    <span class="cart__price">$16</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>                    
+                </div>
+            </article>
+            
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./men design shirt.webp" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Varnisa</h3>
+                    <span class="cart__price">$10</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>                    
+                </div>
+            </article>
+       </div>
+
+       <div class="cart__prices">
+        <span class="cart__prices-item">3item</span>
+        <span class="cart__prices-total">$38</span>
+       </div>
+    </div>
+
+    <!-- ++================LOGIN================ -->
+    <div class="login" id="login">
+            <i class="bx bx-x login__close" id="login-close"></i>
+            
+            <h2 class="login__title-center">login</h2>
+
+        <form action="" class="login__form grid">
+            <div class="login__content">
+                    <label for="" class="login__label"> Email</label>
+                    <input type="email" class="login__input">
+            </div>
+
+            <div class="login__content">
+                    <label for="" class="login__label"> Password</label>
+                    <input type="password" class="login__input"> 
+            </div>
+
+            <div>
+                <a href="#" class="button" > Sign in</a>
+            </div>
+
+            <div>
+                <p class="signup"> Not a member? <a href="registration.html">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+
+    
+
+
+    <main class="main">
+        
+        <section class="home conatinear">
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+                    
+                    
+
+                    <!-- HOME SWIPER 1 -->
+                    <section class="swiper-slide">
+                        <div class="home__content grind">
+                            <div class="home__group">
+                                <img src="./HTB1djnRX1H2gK0jSZFEq6AqMpXa7.avif" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title "> The"Cardigan"</h4>
+                                      <span class="home__details-subtitle">Woolen</span>
+                                </div>
+                            </div>
+
+ 
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1 TRENDING ITEM</h3>
+                                <h1 class="home__title">ORIGINAL <br>IS NEVER <br> FINISHED!!</h1>
+                                <p class="home__description"> A specialist label creating luxury essentials. <br>
+                                Ethically crafted with an unwavering <br> commitment to exceptional quality.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button"> Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details<i
+                                    class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- HOME SWIPER 2 -->
+                    <section class="swiper-slide"></section>
+                        <div class="home__content grind">
+                            <div class="home__group">
+                                <img src="./meri vali.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title "> Jqueezy</h4>
+                                    <span class="home__details-subtitle">hoodie</span>
+                                </div>
+                            </div>
+
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#2 TRENDING ITEM</h3>
+                                <h1 class="home__title">FALL <br>WINTER <br> 2024</h1>
+                                <p class="home__description"> A specialist label creating luxury essentials. <br>
+                                Ethically crafted with an unwavering <br> commitment to exceptional quality.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button"> Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details<i
+                                    class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- HOME SWIPER 3 -->
+                    <section class="swiper-slide"></section>
+                        <div class="home__content grind">
+                            <div class="home__group">
+                                <img src="./BlackZipHoodie.webp" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title "> lurry"</h4>
+                                    <span class="home__details-subtitle">BLACKZip</span>
+                                </div>
+                            </div>
+
+
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#3 TRENDING ITEM</h3>
+                                <h1 class="home__title">SALE 20% <br> OFF ON <br> EVERYTHING!!</h1>
+                                <p class="home__description"> A specialist label creating luxury essentials. <br>
+                                Ethically crafted with an unwavering <br> commitment to exceptional quality.</p>
+
+                                <div class="home__buttons">
+                                    <a href="details.html" class="button"> Buy Now</a>
+                                    <a href="details.html" class="button--link button--flex">View Details<i
+                                    class="bx bx-right-arrow-alt button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>  
+
+                <div class="swiper-pagination"></div>                
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        </section>
+
+        <!-- DISCOUNT -->
+         <section class="discount section">
+            <div class="discount__container  container grid">
+                <img src="./classic-black-leather-bikers-jacket-600nw-529695178.webp" alt="" class="discount__img">
+
+                <div class="discount__data">
+                    <h2 class="discount__title">50% Discount <br> On New  Product</h2>
+                    <a href="#" class="button"> GO to new</a>
+                </div>
+            </div>
+         </section>
+
+
+         <!-- NEW ARRIVALS -->
+            <section class="new section">
+            <h2 class="section__title">New Arrivals</h2>
+
+            <div class="new__container container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                    <!-- NEW CONTENT 1 -->
+                    <div class="new__content  swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./ladies-top-6.jpg" alt="" class="new__img">
+                        <h3 class="new__title">Windbreaker hoodie</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$14.99</span>
+                            <span class="new__discount">$2.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                     <!-- NEW CONTENT 2 -->
+                     <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./m_wp_6449bb824bc6559da5147080.webp" alt="" class="new__img">
+                        <h3 class="new__title">Girl Hot Jacket</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$11.99</span>
+                            <span class="new__discount">$21.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                     <!-- NEW CONTENT 3 -->
+                     <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./printed-ladies-lower-500x500.webp" alt="" class="new__img">
+                        <h3 class="new__title">Ladie Printed</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$31.99</span>
+                            <span class="new__discount">$9.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                     <!-- NEW CONTENT 4 -->
+                     <div  class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./Winter-Women-prime-S-Wool-Collar-Plush-Cotton-Jacket-Ladies-Pink-Coats.webp" alt="" class="new__img">
+                        <h3 class="new__title">Girl coat</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$14.99</span>
+                            <span class="new__discount">$2.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                     <!-- NEW CONTENT 5 -->
+                     <div class="new__content swiper-slide">
+                        <div class="new__tag">New</div>
+                        <img src="./men design shirt.webp" alt="" class="new__img">
+                        <h3 class="new__title">Men shirt</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$16.99</span>
+                            <span class="new__discount">$5.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                     <!-- NEW CONTENT 6 -->
+                     <div class="new__content swiper-slide">
+                        <div class="new__tag" >New</div>
+                        <img src="./Winter-Women-prime-S-Wool-Collar-Plush-Cotton-Jacket-Ladies-Pink-Coats.webp" alt="" class="new__img">
+                        <h3 class="new__title">Windbreaker Jacket</h3>
+                        <span class="new__subtitle">Accessory  <br></span>
+
+                        <div class="new__prices">
+                            <span class="new__price">$34.99</span>
+                            <span class="new__discount">$12.99</span>
+                        </div>
+
+                        <a href="details.html" class="button new__button">
+                            <i class="bx bx-cart-alt new__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+         <!-- Steps -->
+          <section class="steps section container">
+
+            
+          </section>
+          
+
+
+
+
+    </main>
+
+
+    <script src="assets/js/1.js"></script>
+    <script src="script.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
