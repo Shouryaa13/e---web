@@ -21,11 +21,20 @@
 
 
 
+// =================show chat============//
+
+const card = document.getElementById('card'),
+        cartShop = document.getElementById('cart-shop'),
+        cartclose = document.getElementById('card-close')
 
 
 
-
-
+// *Validate if constant exists============/
+if(cartShop) {
+  cartShop.addEventListener("click",() => {
+    cart.classlist.add('.show-cart')
+  })
+}
 
 
 
@@ -53,3 +62,13 @@ function scrollHeader (){
 }
 
 window.addEventListener('scroll',scrollHeader)
+
+
+// NEW SWIPER????????//*
+
+// var newSwiper = new Swiper(".new-swiper", {
+//   spaceBetween:16,
+//   centeredSlides:true,
+//   slidesPerview:"auto",
+//   loop: 'true' ,
+// });
