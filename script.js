@@ -23,20 +23,70 @@
 
 // =================show chat============//
 
-const card = document.getElementById('card'),
-        cartShop = document.getElementById('cart-shop'),
-        cartclose = document.getElementById('card-close')
+const cart = document.getElementById('cart'),
+              cartShop = document.getElementById('cart-shop'),
+              cartClose = document.getElementById('cart-close');
 
+        // Add event listener to open cart
+        cartShop.addEventListener('click', () => {
+            cart.classList.add('show-cart');
+        });
 
+        // Add event listener to close cart
+        cartClose.addEventListener('click', () => {
+            cart.classList.remove('show-cart');
+        });
 
-// *Validate if constant exists============/
-if(cartShop) {
-  cartShop.addEventListener("click",() => {
-    cart.classlist.add('.show-cart')
-  })
-}
+        // Home Swiper Initialization
+        var homeSwiper = new Swiper(".home-swiper", {
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
 
+        // Scroll change header background
+        function scrollHeader() {
+            const header = document.getElementById('header');
+            if (window.scrollY >= 50) {
+                header.classList.add('scroll-header');
+            } else {
+                header.classList.remove('scroll-header');
+            }
+        }
+        window.addEventListener('scroll', scrollHeader);
 
+// ================login '''''''''==============/
+
+const login = document.getElementById('login'),
+              loginbutton = document.getElementById('login-button'),
+              loginClose = document.getElementById('login-close');
+
+        // Add event listener to open cart
+        if(loginbutton)
+        loginbutton.addEventListener('click', () => {
+            login.classList.add('show-login');
+        });
+
+        // Add event listener to close cart
+        if(loginClose) {
+        loginClose.addEventListener('click', () => {
+            login.classList.remove('show-login');
+        });
+    } 
+
+        // Scroll change header background
+        function scrollHeader() {
+            const header = document.getElementById('header');
+            if (window.scrollY >= 50) {
+                header.classList.add('scroll-header');
+            } else {
+                header.classList.remove('scroll-header');
+            }
+        }
+        window.addEventListener('scroll', scrollHeader);
 
 
 
