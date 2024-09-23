@@ -1,22 +1,17 @@
+// show menu================*//
+const navMenu = document.getElementById('nav-menu'),
+              navToggle = document.getElementById('nav-toggle'),
+              navClose8 = document.getElementById('nav-close')
 
 
+// ==============MENU SHOW************-------/
+// *validate if constante exists ==========/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-
+if(navToggle) {
+    navToggle.addEventListener("click",() => {
+        navMenu.classList.add ('show-menu')
+    })
+}
 
 
 
@@ -108,7 +103,7 @@ function scrollHeader (){
     const header= document.getElemnetById('header')
     // when the scroll is greater than 50 viewport height add the scroll -header class to the header tag
     if(this.scrollY >=50) header.classlist.add('scroll-header'); else header.classlist.remove('scroll-header')
-
+ 
 }
 
 window.addEventListener('scroll',scrollHeader)
@@ -116,9 +111,19 @@ window.addEventListener('scroll',scrollHeader)
 
 // NEW SWIPER????????//*
 
-// var newSwiper = new Swiper(".new-swiper", {
+// var newSwiper = new Swiper(".ne w-swiper", {
 //   spaceBetween:16,
 //   centeredSlides:true,
 //   slidesPerview:"auto",
 //   loop: 'true' ,
 // });
+
+
+
+// ===============scroll up============
+function scrollup() {
+    const scrollup = document.getElementById('scroll-up');
+    if (this.scrollY>= 350) scrollup.classList.add('show-scroll'); else scrollup.classList.remove('show-scroll')
+}
+
+window.addEventListener('scroll',scrollup)
