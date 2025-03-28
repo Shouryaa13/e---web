@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="index.html">
+</head>
+<body>
+    <!-- ======BOXICONS======= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .card-section {
+            padding: 6rem 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .payment-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .card-logo {
+            font-size: 2rem;
+            color: #4070f4;
+        }
+
+        .chip-img {
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(120deg, #eee 25%, #ddd 25%, #ddd 50%, #eee 50%, #eee 75%, #ddd 75%, #ddd 100%);
+            border-radius: 8px;
+        }
+
+        .card-number {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .card-holder, .card-expiry {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .card-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: #999;
+        }
+
+        .card-value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .add-card-form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #4070f4;
+        }
+
+        .submit-btn {
+            background-color: #4070f4;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #3060e0;
+        }
+    </style>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <i class="bx bxs-shopping-bags nav__logo-icon"></i>e-shopper
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="cart.html" class="nav__link">Cart</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="card.html" class="nav__link active-link">Card</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="card-section">
+        <div class="card-container">
+            <!-- Existing Card Display -->
+            <div class="payment-card">
+                <div class="card-header">
+                    <i class='bx bx-chip card-logo'></i>
+                    <div class="chip-img"></div>
+                </div>
+                <div class="card-number">**** **** **** 1234</div>
+                <div class="card-details">
+                    <div class="card-holder">
+                        <div class="card-label">Card Holder</div>
+                        <div class="card-value">John Doe</div>
+                    </div>
+                    <div class="card-expiry">
+                        <div class="card-label">Expires</div>
+                        <div class="card-value">12/25</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Card Form -->
+            <div class="add-card-form">
+                <h2 style="margin-bottom: 1.5rem; color: #333;">Add New Card</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Card Number</label>
+                        <input type="text" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Card Holder Name</label>
+                        <input type="text" class="form-input" placeholder="John Doe">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label">Expiry Date</label>
+                            <input type="text" class="form-input" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">CVV</label>
+                            <input type="password" class="form-input" placeholder="***" maxlength="3">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Card</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

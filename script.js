@@ -1,129 +1,137 @@
-// show menu================*//
+// Show Menu =======================//
 const navMenu = document.getElementById('nav-menu'),
-              navToggle = document.getElementById('nav-toggle'),
-              navClose8 = document.getElementById('nav-close')
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
 
+// ==============MENU SHOW ==========//
+// *Validate if constant exists*
 
-// ==============MENU SHOW************-------/
-// *validate if constante exists ==========/*
-
-if(navToggle) {
-    navToggle.addEventListener("click",() => {
-        navMenu.classList.add ('show-menu')
-    })
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add('show-menu');
+    });
 }
 
+// ==============MENU CLOSE ==========//
+if (navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
 
-
-
-// =================show chat============//
-
+// =================== Show Cart ================//
 const cart = document.getElementById('cart'),
-              cartShop = document.getElementById('cart-shop'),
-              cartClose = document.getElementById('cart-close');
+      cartShop = document.getElementById('cart-shop'),
+      cartClose = document.getElementById('cart-close');
 
-        // Add event listener to open cart
-        cartShop.addEventListener('click', () => {
-            cart.classList.add('show-cart');
-        });
+// Add event listener to open cart
+if (cartShop) {
+    cartShop.addEventListener('click', () => {
+        cart.classList.add('show-cart');
+    });
+}
 
-        // Add event listener to close cart
-        cartClose.addEventListener('click', () => {
-            cart.classList.remove('show-cart');
-        });
+// Add event listener to close cart
+if (cartClose) {
+    cartClose.addEventListener('click', () => {
+        cart.classList.remove('show-cart');
+    });
+}
 
-        // Home Swiper Initialization
-        var homeSwiper = new Swiper(".home-swiper", {
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
+// =================== Login Show/Close ================//
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('login-button');
+    const loginModal = document.getElementById('login');
+    const loginClose = document.getElementById('login-close');
+    
+    // Toggle login modal on click
+    loginButton.addEventListener('click', () => {
+        loginModal.classList.add('active');
+    });
 
-        // Scroll change header background
-        function scrollHeader() {
-            const header = document.getElementById('header');
-            if (window.scrollY >= 50) {
-                header.classList.add('scroll-header');
-            } else {
-                header.classList.remove('scroll-header');
-            }
+    // Close login modal
+    loginClose.addEventListener('click', () => {
+        loginModal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === loginModal) {
+            loginModal.classList.remove('active');
         }
-        window.addEventListener('scroll', scrollHeader);
+    });
+});
 
-// ================login '''''''''==============/
+// =================== Scroll Change Header Background ================//
+function scrollHeader() {
+    const header = document.getElementById('header');
+    if (window.scrollY >= 50) {
+        header.classList.add('scroll-header');
+    } else {
+        header.classList.remove('scroll-header');
+    }
+}
+window.addEventListener('scroll', scrollHeader);
 
-const login = document.getElementById('login'),
-              loginbutton = document.getElementById('login-button'),
-              loginClose = document.getElementById('login-close');
-
-        // Add event listener to open cart
-        if(loginbutton)
-        loginbutton.addEventListener('click', () => {
-            login.classList.add('show-login');
-        });
-
-        // Add event listener to close cart
-        if(loginClose) {
-        loginClose.addEventListener('click', () => {
-            login.classList.remove('show-login');
-        });
-    } 
-
-        // Scroll change header background
-        function scrollHeader() {
-            const header = document.getElementById('header');
-            if (window.scrollY >= 50) {
-                header.classList.add('scroll-header');
-            } else {
-                header.classList.remove('scroll-header');
-            }
-        }
-        window.addEventListener('scroll', scrollHeader);
-
-
-
-// HOME SWIPER--------------???????????*/
-
+// =================== Home Swiper Initialization ================//
 var homeSwiper = new Swiper(".home-swiper", {
-    spaceBetween:30,
-    loop: 'true' ,
-
+    spaceBetween: 30,
+    loop: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-  });
+});
 
-//   change backgiornd  header/////////////*
+// =================== New Swiper Initialization ================//
+var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+});
 
-function scrollHeader (){
-    const header= document.getElemnetById('header')
-    // when the scroll is greater than 50 viewport height add the scroll -header class to the header tag
-    if(this.scrollY >=50) header.classlist.add('scroll-header'); else header.classlist.remove('scroll-header')
- 
+// =================== Scroll Up ================//
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    if (window.scrollY >= 350) {
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
 }
+window.addEventListener('scroll', scrollUp);
 
-window.addEventListener('scroll',scrollHeader)
-
-
-// NEW SWIPER????????//*
-
-// var newSwiper = new Swiper(".ne w-swiper", {
-//   spaceBetween:16,
-//   centeredSlides:true,
-//   slidesPerview:"auto",
-//   loop: 'true' ,
-// });
-
-
-
-// ===============scroll up============
-function scrollup() {
-    const scrollup = document.getElementById('scroll-up');
-    if (this.scrollY>= 350) scrollup.classList.add('show-scroll'); else scrollup.classList.remove('show-scroll')
+// =================== Fixing typos and formatting issues ================//
+// Corrected typo in 'scrollHeader' function call
+function scrollHeader() {
+    const header = document.getElementById('header');
+    if (window.scrollY >= 50) {
+        header.classList.add('scroll-header');
+    } else {
+        header.classList.remove('scroll-header');
+    }
 }
+window.addEventListener('scroll', scrollHeader);
 
-window.addEventListener('scroll',scrollup)
+
+
+const accordionItem = document.querySelectorAll('.question__item')
+
+
+accordionItem.forEach((item) => {
+    const accordionHeader = item.querySelector('.question__header')
+
+    accordionHeader.addEventListener ('click',() =>{
+        const openItem = document.querySelector('.accordion-open')
+
+        toggleItem(item)
+    })
+})
+
+const toggleItem = (item) => {
+    const accordionContent = item.querySelector('.questions__content')
+
+    accordionContent.style.height = accordionContent.scrollHeight + 'px'
+    item.classList.add ('accordion-open')
+}
